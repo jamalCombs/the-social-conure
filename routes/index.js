@@ -10,14 +10,8 @@ var twilio = require('twilio');
 // Geocoder
 var geocoder = require('geocoder');
 
-// our db model1
-var Status = require("../models/status.js");
-
-// our db model2
+// our db model
 var Bird = require("../models/bird.js");
-
-
-
 
 /**
  * GET '/'
@@ -31,7 +25,7 @@ router.get('/', function(req, res) {
   	'name': 'the-social-conure',
   	'api-status':'OK',
     'instructions': "Text your bird post to (856)-288-2761",
-    'format': 'type, location'
+    'format': 'type,name,location'
   }
 
   // respond with json data
@@ -58,7 +52,7 @@ router.post('/twilio-callback', function(req,res){
     from: incomingNum
   }
 
-  var status = new Status(msgToSave)
+  var status = new Bird(msgToSave)
 
   status.save(function(err,data){
     // set up the twilio response
@@ -78,8 +72,6 @@ router.post('/twilio-callback', function(req,res){
       res.send(twilioResp.toString());
     }
   })
-
-
 })
 
 // a different twilio callback, this one for our bird posts
@@ -110,12 +102,11 @@ router.post('/twilio-callback2', function(req,res){
   console.log(msgArray);
 
   // now we can get the value
-  var type = msgArray[0];
   var location = msgArray[3];
 
   // set up our data
-  var birdPostToSave = {
-    type: type,
+  var saveBirdLocation = {
+    location: location
   }
 
   // now, let's geocode the location
@@ -138,34 +129,30 @@ router.post('/twilio-callback2', function(req,res){
     var lat = data.results[0].geometry.location.lat;
 
     // now, let's add this to our animal object from above
-    birdToSave.location = {
+    saveBirdLocation.location = {
       geo: [lon,lat], // need to put the geo co-ordinates in a lng-lat array for saving
       name: data.results[0].formatted_address // the location name
     }
 
-      var bird = new Bird(birdPostToSave)
+      var location = new Bird(saveBirdLocation)
 
-      bird.save(function(err,data){
+      location.save(function(err,data){
         if(err){
           // respond to user
-          twilioResp.sms('Oops! We couldn\'t save bird post --> ' + incomingMsg);
+          twilioResp.sms('Oops! We couldn\'t save bird location --> ' + incomingMsg);
           // respond to twilio
           res.set('Content-Type', 'text/xml');
           res.send(twilioResp.toString());
         }
         else {
           // respond to user
-          twilioResp.sms('Successfully saved bird post! --> ' + incomingMsg);
+          twilioResp.sms('Successfully saved bird location! --> ' + incomingMsg);
           // respond to twilio
           res.set('Content-Type', 'text/xml');
           res.send(twilioResp.toString());
         }
       })
-
-
   });
-
-
 })
 
 router.get('/api/get',function(req,res){
@@ -186,7 +173,6 @@ router.get('/api/get',function(req,res){
       res.json(jsonData);
     }
   })
-
 })
 
 router.get('/api/get/latest',function(req,res){
@@ -207,7 +193,6 @@ router.get('/api/get/latest',function(req,res){
       res.send(data[0].status);
     }
   })
-
 })
 
 
@@ -229,7 +214,6 @@ router.get('/api/get/bird',function(req,res){
       res.json(jsonData);
     }
   })
-
 })
 
 

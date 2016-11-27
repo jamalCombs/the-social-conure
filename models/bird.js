@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // define Schema
-var BirdPost = new Schema({
-	type: String, // bird post
+var BirdStatus = new Schema({
+	staus: String, // what is the status
+	name: String, // who is it from
 	location: {
 		geo: { type: [Number], index: { type: '2dsphere', sparse: true } },
 		name: String
@@ -11,6 +12,5 @@ var BirdPost = new Schema({
 	dateAdded : { type: Date, default: Date.now },
 });
 
-
 // export model
-module.exports = mongoose.model('Bird',BirdPost);
+module.exports = mongoose.model('Bird',BirdStatus);
