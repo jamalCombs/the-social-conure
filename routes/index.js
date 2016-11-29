@@ -16,9 +16,9 @@ var Bird = require("../models/bird.js");
 /**
  * GET '/'
  * Default home route. Just relays a success message back.
- * @param  {Object} req
+ *@param  {Object} req
  * @return {Object} json
- */
+ **/
 router.get('/', function(req, res) {
 
   var jsonData = {
@@ -28,8 +28,9 @@ router.get('/', function(req, res) {
     'format': 'type,name,location'
   }
 
+  res.render('index.html');
   // respond with json data
-  res.json(jsonData)
+  // res.json(jsonData)
 });
 
 
