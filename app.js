@@ -20,14 +20,14 @@ if (app.get("env") === "development") {
 
 
 // connect to database
-// app.db = mongoose.connect(process.env.MONGODB_URI);
-// console.log(process.env.TEST);
+app.db = mongoose.connect(process.env.MONGODB_URI);
+console.log(process.env.MONGODB_URI);
 
-var mLab = require('mongolab-data-api')(process.env.MLABKEY);
-
-mLab.listCollections(process.env.MLABDB, function(err, data){
-  console.log(data);
-});
+// var mLab = require('mongolab-data-api')(process.env.MLABKEY);
+//
+// mLab.listCollections(process.env.MLABDB, function(err, data){
+//   console.log(data);
+// });
 
 
 
