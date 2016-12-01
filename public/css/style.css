@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, sans-serif;
-  background-color: #D8F1A8;
+  background-color: #F5EC9D;
   box-shadow: 10px 10px 5px #333333;
 }
 
@@ -8,25 +8,53 @@ h1 {
   font-family: Roboto, sans-serif;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
+
+/* Face Image */
+
+.face img {
+  position: absolute;
+  right: : 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -10px;
 }
 
+
+/* Bird Image */
+
+.bird img {
+  position: absolute;
+  top: 50%;
+  margin-left: 100px;
+  margin-top: -400px;
+}
+
+
+/* Quote Image */
+
+.quote img {
+  position: absolute;
+  top: 50%;
+  margin-left: 1470px;
+  margin-top: 700px;
+}
+
+
 /* Subheading */
+
 .sub-header {
   font-family: Roboto, sans-serif;
   font-size: 10pt;
 }
 
 
-/* Status Text */
+/* Status */
+
 .p1 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
-  font-size: 4.5vw;
+  color: black;
+  font-size: 1.5vw;
   line-height: 95%;
   letter-spacing: -0.03em;
   text-align: center;
@@ -34,7 +62,28 @@ img {
   margin: 0 30px 7px;
 }
 
+
+/* Status Text */
+
+.p2 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 4.0vw;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  display: block;
+  margin: 0 30px 7px;
+}
+
+.col-sm-12 {
+  width: 102%;
+}
+
+
 /* Status Frame */
+
 .panel {
   margin-bottom: 20px;
   background-color: #ffffff;
@@ -43,11 +92,24 @@ img {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 80px 20px 50px;
   vertical-align: middle;
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Posts Frame  */
+
+/* Alert Panel */
+
+.alert-success {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #F4E67A;
+  border-color: #F7B318;
+  color: black;
+}
+
+
+/* Posts Frames  */
+
 .well {
+  color: black;
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -60,54 +122,73 @@ img {
   box-shadow: none;
 }
 
+
 /* Navbar Main */
+
 .navbar-inverse {
   background-color: #7CA17C;
   border-color: #B8DAA3;
 }
 
+
 /* Navbar Main Tab */
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
   color: #ffffff;
   background-color: #6DA180;
 }
 
+
 /* Heading Info */
+
 .organization {
   font-family: Roboto Condensed, sans-serif;
   color: black;
-  font-size: 11pt;
+  font-size: 13pt;
   line-height: 15pt;
   border-bottom: 1px solid black;
   display: inline-block;
   padding: 0.1em 2em 0.3em 0;
 }
 
+
 /* Title */
+
 .navbar-brand {
-  padding: 35px 0 90px;
+  padding: 35px 0 250px;
   margin-left: 30%;
 }
 
+
 /* Menu Tabs */
-.nav > li > a {
+
+.nav>li>a {
   color: black;
   position: relative;
-  display: block;
-  border-radius: 0%;
   font-weight: normal;
   cursor: pointer;
+  font-size: 7.5pt;
   line-height: 1.3em;
-  padding: 6px 7px 6px 9px;
+  margin-bottom: 30%;
+  padding: 6px 7px 6px 90px;
   text-transform: uppercase;
   text-align: center;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.7), 1px 1px 0px rgba(255, 255, 255, 0.5) inset;
   margin-bottom: 8px;
-  top: 8px;
-  right: -227px;
+  top: 50px;
+  right: -50px;
 }
 
+.nav>li>a:hover {
+  background-color: #F4E67A;
+}
+
+
 /* Search Bar */
-.navbar-form .input-group > .form-control {
+
+.navbar-form .input-group>.form-control {
   font-family: "RISD-DM-Univers-Extended", Helvetica, sans-serif;
   width: auto;
   font-weight: bold;
@@ -122,7 +203,7 @@ img {
   line-height: 20px;
   background: transparent;
   margin-bottom: 9px;
-  top: 50px;
+  top: 30px;
   right: 105px;
 }
 
@@ -132,7 +213,8 @@ img {
 }
 
 .clock {
-  font-size: 30px;
+  font-size: 15px;
+  color: black;
   top: auto;
   left: 0;
   bottom: 0;
@@ -142,14 +224,16 @@ img {
   z-index: 1000;
   top: 93%;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -900px;
   margin-top: -0.7em;
   width: 400px;
   pointer-events: none;
   text-align: center;
 }
 
+
 /* Message Panel */
+
 .col-sm-9 {
   width: 75%;
   margin-bottom: 20px;
@@ -159,17 +243,26 @@ img {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 80px 20px 50px;
   vertical-align: middle;
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
 }
 
+
 /* Profile Info */
+
 .col-sm-3.well {
   margin-bottom: 20px;
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 0px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 255, 64, 0.05);
   padding: 80px 20px 50px;
   vertical-align: middle;
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+}
+
+.my-profile-name {
+  font-size: 15pt;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }

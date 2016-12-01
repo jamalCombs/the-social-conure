@@ -1,163 +1,176 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>The Social Conure</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="utf-8">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<title>The Social Conure</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Custom Script -->
 
-  <!-- Custom Script -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css"/>
-
-  <!-- Custom Font - Change 'Muli' to the font you want -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
-
-  <style>
-  </style>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script><!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet"><!-- Custom Font - Change 'Muli' to the font you want -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<style>
+	</style>
 </head>
+
 <body>
+	<!-- Navigation Bar -->
+	<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
 
-<!-- Navigation Bar -->
-<!-- <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header"> -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="navbar-brand" href="#">
-        <div class="organization">
-          <div class="main-header">The Social Conure</div>
-          <div class="sub-header">Pet Bird Chatbot</div>
-        </div>
-      </div>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Messages</a></li>
-      </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group input-group">
-          <input type="text" class="form-control" placeholder="Search..">
-          <span class="input-group-btn">
-          </span>
-        </div>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col-sm-3 well">
-      <div class="well">
-        <p><a href="#">My Profile</a></p>
-        <!-- <img src="bird.jpg" class="img-circle" height="65" width="65" alt="Avatar"> -->
-      </div>
-      <div class="alert alert-success fade in">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-        <p><strong>Ey!</strong></p>
-        People are looking at your profile. Find out who.
-      </div>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-    <div class="col-sm-7">
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="panel panel-default text-left">
-            <div class="panel-body">
-              <p class="p1" contenteditable="true">Status: Feeling Blue</p1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>John</p>
-           <!-- <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar"> -->
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Bo</p>
-           <!-- <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar"> -->
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Jane</p>
-           <!-- <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar"> -->
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p>Anja</p>
-           <!-- <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar"> -->
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<img src="/img/bird-background-white-black-img.png" alt="Bird Image">
-
-<img src="/img/face-background-img.png" alt="Face Image">
-
-<div class="clock">
-  <div class="screen">
-    <span class="date">11/28/2016</span>
-    <span class="time">1:32</span>
-  </div>
-</div>
+	<div class="navbar-brand">
+		<div class="organization">
+			<div class="main-header">
+				> The Social Conure
+			</div>
 
 
-<!-- JavaScript -->
-<!-- <script src="assets/js/jquery.js"></script>
+			<div class="sub-header">
+				Pet Bird Chatbot
+			</div>
+		</div>
+	</div>
+
+
+	<div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+			<li class="active">
+				<a href="#">Home</a>
+			</li>
+
+
+			<li>
+				<a href="#">Messages</a>
+			</li>
+		</ul>
+
+
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group input-group">
+				<input class="form-control" placeholder="Search.." type="text"> <span class="input-group-btn"></span>
+			</div>
+		</form>
+	</div>
+
+
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-sm-3 well">
+				<div class="well">
+					<p><a class="my-profile-name" href="#">Jamal Combs</a>
+					</p>
+				</div>
+
+
+				<div class="alert alert-success fade in">
+					<a aria-label="close" class="close" data-dismiss="alert" href="#">×</a>
+
+					<p><strong>Chirp!</strong>
+					</p>
+					Lio just posted a message.
+				</div>
+			</div>
+
+
+			<div class="col-sm-7">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default text-left">
+							<div class="panel-body">
+								<p class="p1" contenteditable="true" style="color: #BFBFBF;">What's on your mind?</p>
+
+
+								<p class="p2" contenteditable="true">Feeling Blue</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="well">
+							<p class="p3">Lio</p>
+						</div>
+					</div>
+
+
+					<div class="col-sm-9">
+						<div class="well">
+							<p>These safflower seeds are delicious, but I'm in the mood for fresh pineapple. On you way home, can you stop by Foodtown and pick up a pineapple. Thanks, Buddy!</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+					</div>
+
+
+					<div class="col-sm-9">
+						<div class="well">
+							<p>By the way, it's raining outside. Your umbrella is here. I see it near to your bed. Lol.</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+					</div>
+
+
+					<div class="col-sm-9">
+						<div class="well">
+							<p>I forgot to mention, I am starting to hate Jazz music. I much rather listen to outside ambiance/white noise. Since it is raining today, I'll listen to this radio station. But tomorrow...</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-3">
+					</div>
+
+
+					<div class="col-sm-9">
+						<div class="well">
+							<p>Paul is arguing with his girlfriend again. So loud.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="bird img"><img align="absmiddle" alt="Bird Image" src="/img/bird-background-white-black-img.png" style="background-position: top left;">
+	</div>
+
+
+	<div class="face img"><img alt="Face Image" src="/img/face-background-img.png">
+	</div>
+
+
+	<div class="quote img"><img alt="Quote Image" src="/img/chirp-quote.png">
+	</div>
+
+
+	<div class="clock">
+		<div class="screen">
+			<span class="date">11/28/2016</span> <span class="time">1:32</span>
+		</div>
+	</div>
+	<!-- JavaScript -->
+	<!-- <script src="assets/js/jquery.js"></script>
 <script src="assets/js/style.js"></script> -->
-<script src="js/main.js"></script>
-
-
+	<script src="js/main.js">
+	</script>
 </body>
 </html>
