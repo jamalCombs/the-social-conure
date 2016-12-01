@@ -9,17 +9,6 @@ h1 {
 }
 
 
-/* Face Image */
-
-.face img {
-  position: absolute;
-  right: : 50%;
-  top: 50%;
-  margin-left: -100px;
-  margin-top: -10px;
-}
-
-
 /* Bird Image */
 
 .bird img {
@@ -27,6 +16,7 @@ h1 {
   top: 50%;
   margin-left: 100px;
   margin-top: -400px;
+  position: absolute;
 }
 
 
@@ -37,6 +27,7 @@ h1 {
   top: 50%;
   margin-left: 1470px;
   margin-top: 700px;
+  position: absolute;
 }
 
 
@@ -76,6 +67,17 @@ h1 {
   display: block;
   margin: 0 30px 7px;
 }
+
+
+/* Message Tag */
+
+.p3 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 11pt;
+  color: black;
+  font-weight: bold;
+}
+
 
 .col-sm-12 {
   width: 102%;
